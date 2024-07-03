@@ -29,7 +29,6 @@
   width: 100%;
   margin-top: 15px;
   padding: 30px;
-  background-color: rgb(197, 197, 197);
 }
 
 .columna-categoria-local {
@@ -42,6 +41,15 @@
 .columna-categoria-local button {
   width: 90%;
   height: 60px;
+  background: #000000;
+  color: #d88913;
+  font-weight: bold;
+  font-size: larger;
+}
+.columna-categoria-local button:hover {
+  background: #d88913;
+  border:1px solid #000000;
+  color: #ffffff;
 }
 
 @media (max-width: 576px) {
