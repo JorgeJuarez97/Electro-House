@@ -1,4 +1,4 @@
-const categorias = [
+const categorias_array = [
     { id: 1, nombre: "Ofertas", enPrincipal: true },
     { id: 2, nombre: "Cocina", enPrincipal: true },
     { id: 3, nombre: "Comunicación", enPrincipal: true },
@@ -16,7 +16,15 @@ const categorias = [
     { id: 15, nombre: "Outlet", enPrincipal: false }
 ];
 
-const productos = [
+if (!localStorage.getItem('categorias')) {
+    localStorage.setItem('categorias', JSON.stringify(categorias_array));
+    categorias = categorias_array;
+}
+else {
+    categorias = JSON.parse(localStorage.getItem('categorias'));
+}
+
+const productos_array = [
     {
         id: 1,
         nombre: "Lavadora LG TurboWash",
@@ -218,6 +226,16 @@ const productos = [
         imagenPrincipal: "https://picsum.photos/800/400?random=23"
     }
 ];
+
+if (!localStorage.getItem('productos')) {
+    localStorage.setItem('productos', JSON.stringify(productos_array));
+    productos = productos_array;
+}
+else {
+    productos = JSON.parse(localStorage.getItem('productos'));
+}
+
+
 
 const contendor_categorias = document.getElementById('contenedor-categorias-index');
 const contenedor_productos = document.getElementById('row-productos-index');

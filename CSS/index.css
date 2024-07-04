@@ -85,16 +85,12 @@ justify-content: center;
   border: 1px solid #000000;
   background: #eaeaea;
 }
-.titulo-producto{
-
-}
 
 .precio-producto{
 color: #d88913;
 }
 .btn-Comprar{
   background-color: #000000;
-  color: #118607;
   color: #118607;
 }
 .btn-Comprar:hover{

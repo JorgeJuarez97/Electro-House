@@ -41,9 +41,9 @@ body {
     clip-path: circle(70% at 100% 100%);
     background: radial-gradient(
       circle at 100% 100%,
-      #ffffff,
-      #5a89e2 10%,
-      #19034b 20%,
+      #e7b263,
+      #d88913 10%,
+      #915e12 20%,
       rgba(128, 0, 0, 0) 50%
     );
     z-index: 2;
@@ -69,7 +69,7 @@ body {
   .titulo {
     margin: 0;
     padding: 10px;
-    color: #00e1ff;
+    color: #d88913;
     font-size: 2.5rem;
     font-family: monospace;
   }
@@ -101,7 +101,7 @@ body {
     width: 150px;
     background-color: transparent;
     color: #ffffff;
-    border: 1px solid #00e1ff;
+    border: 1px solid #d88913;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -116,12 +116,12 @@ body {
   }
   
   .contenedor-botones .boton-login:hover {
-    background-color: #00eeff;
+    background-color: #d88913;
     color: #000000;
   }
   
   .contenedor-botones .boton-arrow:hover .fa-arrow-right {
-    color: #00ffff;
+    color: #d88913;
   }
   
   .contenedor-botones .fa-arrow-right {
