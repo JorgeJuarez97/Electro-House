@@ -1,3 +1,10 @@
+if ((!sessionStorage.getItem('vioHeroPage')) || (sessionStorage.getItem('vioHeroPage')==='false')) {
+    sessionStorage.setItem('vioHeroPage', 'false');
+    window.location.href = "./Paginas/heroPage.html"
+}
+
+
+
 const categorias_array = [
     { id: 1, nombre: "Ofertas", enPrincipal: true },
     { id: 2, nombre: "Cocina", enPrincipal: true },
