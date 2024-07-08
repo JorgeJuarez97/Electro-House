@@ -37,7 +37,7 @@ const productos_array = [
         nombre: "Lavadora LG TurboWash",
         detalle: "Lavadora de carga frontal con tecnología TurboWash",
         marca: "LG",
-        categorias: ["Lavado"],
+        categorias: ["Lavado", "Ofertas"],
         precio: 23999.99,
         cantidad: 10,
         imagenPrincipal: "https://picsum.photos/800/400?random=4"
@@ -47,7 +47,7 @@ const productos_array = [
         nombre: "Heladera Whirlpool No Frost",
         detalle: "Heladera con tecnología No Frost y capacidad XXL",
         marca: "Whirlpool",
-        categorias: ["Refrigeración"],
+        categorias: ["Refrigeración", "Ofertas"],
         precio: 29999.99,
         cantidad: 5,
         imagenPrincipal: "https://picsum.photos/800/400?random=5"
@@ -57,7 +57,7 @@ const productos_array = [
         nombre: "Smart TV Samsung 4K",
         detalle: "Televisor LED 55\" con resolución 4K. Cuenta con Android 11 compatible con muchas aplicaciones.",
         marca: "Samsung",
-        categorias: ["Televisores", "Ofertas"],
+        categorias: ["Televisores", "Ofertas", "Entretenimiento"],
         precio: 44999.99,
         cantidad: 15,
         imagenPrincipal: "https://picsum.photos/800/400?random=6"
@@ -67,7 +67,7 @@ const productos_array = [
         nombre: "Cafetera Philips Senseo",
         detalle: "Cafetera de cápsulas con sistema de preparación de café",
         marca: "Philips",
-        categorias: ["Cocina"],
+        categorias: ["Cocina", "Pequeños Electrodomésticos"],
         precio: 4499.99,
         cantidad: 8,
         imagenPrincipal: "https://picsum.photos/800/400?random=7"
@@ -77,7 +77,7 @@ const productos_array = [
         nombre: "Aire Acondicionado Split Carrier",
         detalle: "Aire acondicionado split con tecnología Inverter",
         marca: "Carrier",
-        categorias: ["Climatización"],
+        categorias: ["Climatización", "Ofertas"],
         precio: 28999.99,
         cantidad: 12,
         imagenPrincipal: "https://picsum.photos/800/400?random=8"
@@ -87,7 +87,7 @@ const productos_array = [
         nombre: "Aspiradora Dyson V11",
         detalle: "Aspiradora sin cable con potencia de succión potente",
         marca: "Dyson",
-        categorias: ["Pequeños Electrodomésticos"],
+        categorias: ["Pequeños Electrodomésticos", "Ofertas"],
         precio: 17999.99,
         cantidad: 6,
         imagenPrincipal: "https://picsum.photos/800/400?random=9"
@@ -97,7 +97,7 @@ const productos_array = [
         nombre: "Barra de Sonido Sony",
         detalle: "Barra de sonido con subwoofer inalámbrico",
         marca: "Sony",
-        categorias: ["Audio y Sonido"],
+        categorias: ["Audio y Sonido", "Entretenimiento"],
         precio: 8999.99,
         cantidad: 9,
         imagenPrincipal: "https://picsum.photos/800/400?random=10"
@@ -107,7 +107,7 @@ const productos_array = [
         nombre: "Laptop Lenovo Ideapad",
         detalle: "Laptop con procesador Intel Core i7 y pantalla Full HD",
         marca: "Lenovo",
-        categorias: ["Informática"],
+        categorias: ["Informática", "Ofertas"],
         precio: 54999.99,
         cantidad: 7,
         imagenPrincipal: "https://picsum.photos/800/400?random=11"
@@ -117,7 +117,7 @@ const productos_array = [
         nombre: "Robot Aspirador Xiaomi Mi Robot",
         detalle: "Robot aspirador inteligente con navegación láser",
         marca: "Xiaomi",
-        categorias: ["Hogar Inteligente"],
+        categorias: ["Hogar Inteligente", "Ofertas"],
         precio: 14999.99,
         cantidad: 4,
         imagenPrincipal: "https://picsum.photos/800/400?random=12"
@@ -127,7 +127,7 @@ const productos_array = [
         nombre: "Secador de Pelo Philips Pro",
         detalle: "Secador de pelo profesional con tecnología iónica",
         marca: "Philips",
-        categorias: ["Cuidado Personal"],
+        categorias: ["Cuidado Personal", "Ofertas"],
         precio: 3999.99,
         cantidad: 11,
         imagenPrincipal: "https://picsum.photos/800/400?random=13"
@@ -137,7 +137,7 @@ const productos_array = [
         nombre: "Licuadora Osterizer",
         detalle: "Licuadora con vaso de vidrio y cuchillas de acero inoxidable",
         marca: "Oster",
-        categorias: ["Cocina"],
+        categorias: ["Cocina", "Pequeños Electrodomésticos"],
         precio: 2599.99,
         cantidad: 14,
         imagenPrincipal: "https://picsum.photos/800/400?random=14"
@@ -147,7 +147,7 @@ const productos_array = [
         nombre: "Router TP-Link WiFi 6",
         detalle: "Router con tecnología WiFi 6 para velocidades ultra rápidas",
         marca: "TP-Link",
-        categorias: ["Informática"],
+        categorias: ["Informática", "Comunicación"],
         precio: 3499.99,
         cantidad: 9,
         imagenPrincipal: "https://picsum.photos/800/400?random=15"
@@ -157,7 +157,7 @@ const productos_array = [
         nombre: "Frigobar Mabe",
         detalle: "Frigobar compacto con congelador integrado",
         marca: "Mabe",
-        categorias: ["Refrigeración"],
+        categorias: ["Refrigeración", "Ofertas"],
         precio: 7999.99,
         cantidad: 6,
         imagenPrincipal: "https://picsum.photos/800/400?random=16"
@@ -167,7 +167,7 @@ const productos_array = [
         nombre: "Cámara de Seguridad Xiaomi",
         detalle: "Cámara IP de seguridad para interiores con visión nocturna",
         marca: "Xiaomi",
-        categorias: ["Hogar Inteligente"],
+        categorias: ["Hogar Inteligente", "Ofertas"],
         precio: 2499.99,
         cantidad: 8,
         imagenPrincipal: "https://picsum.photos/800/400?random=17"
@@ -177,7 +177,7 @@ const productos_array = [
         nombre: "Smartwatch Samsung Galaxy",
         detalle: "Smartwatch con monitor de ritmo cardíaco y GPS integrado",
         marca: "Samsung",
-        categorias: ["Accesorios y Repuestos"],
+        categorias: ["Accesorios y Repuestos", "Cuidado Personal"],
         precio: 6999.99,
         cantidad: 10,
         imagenPrincipal: "https://picsum.photos/800/400?random=18"
@@ -187,7 +187,7 @@ const productos_array = [
         nombre: "Proyector Epson Home Cinema",
         detalle: "Proyector Full HD con tecnología 3LCD",
         marca: "Epson",
-        categorias: ["Entretenimiento"],
+        categorias: ["Entretenimiento", "Ofertas"],
         precio: 38999.99,
         cantidad: 5,
         imagenPrincipal: "https://picsum.photos/800/400?random=19"
@@ -197,7 +197,7 @@ const productos_array = [
         nombre: "Plancha Philips SteamGlide",
         detalle: "Plancha a vapor con suela SteamGlide para un deslizamiento suave",
         marca: "Philips",
-        categorias: ["Cuidado Personal"],
+        categorias: ["Cuidado Personal", "Pequeños Electrodomésticos"],
         precio: 1999.99,
         cantidad: 12,
         imagenPrincipal: "https://picsum.photos/800/400?random=20"
@@ -207,7 +207,7 @@ const productos_array = [
         nombre: "Batidora Kenwood Chef",
         detalle: "Batidora de pedestal con múltiples accesorios para repostería",
         marca: "Kenwood",
-        categorias: ["Cocina"],
+        categorias: ["Cocina", "Pequeños Electrodomésticos"],
         precio: 12999.99,
         cantidad: 7,
         imagenPrincipal: "https://picsum.photos/800/400?random=21"
@@ -217,7 +217,7 @@ const productos_array = [
         nombre: "Teléfono Inalámbrico Panasonic",
         detalle: "Teléfono inalámbrico con contestador automático y pantalla LCD",
         marca: "Panasonic",
-        categorias: ["Comunicación"],
+        categorias: ["Comunicación", "Ofertas"],
         precio: 2999.99,
         cantidad: 9,
         imagenPrincipal: "https://picsum.photos/800/400?random=22"
@@ -227,7 +227,7 @@ const productos_array = [
         nombre: "Robot de Cocina Moulinex",
         detalle: "Robot de cocina multifunción con programas automáticos",
         marca: "Moulinex",
-        categorias: ["Cocina"],
+        categorias: ["Cocina", "Pequeños Electrodomésticos"],
         precio: 17999.99,
         cantidad: 6,
         imagenPrincipal: "https://picsum.photos/800/400?random=23"
