@@ -38,7 +38,7 @@
   margin-bottom: 15px; /* Add margin for small screens */
 }
 
-.columna-categoria-local button {
+.columna-categoria-local .btn-categoria {
   width: 90%;
   height: 60px;
   background: #000000;
@@ -46,7 +46,7 @@
   font-weight: bold;
   font-size: larger;
 }
-.columna-categoria-local button:hover {
+.columna-categoria-local .btn-categoria:hover {
   background: #d88913;
   border:1px solid #000000;
   color: #ffffff;
@@ -110,6 +110,11 @@ color: #d88913;
 .btn-Categoria-Active {
   color: #000000;
   background-color: #d88913;
+}
+.columna-categoria-local .btn-Categoria-Active {
+  background: #d88913;
+  border:1px solid #000000;
+  color: #ffffff;
 }
 
 @media (max-width: 576px) {

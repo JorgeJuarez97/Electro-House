@@ -257,7 +257,6 @@ else {
                 filtro_categoria.includes(categoria)
             )
         );
-        
 }
 }
 
@@ -279,16 +278,30 @@ const filtrarPorCategoria = (e, categoria) => {
    
 }
 
-contendor_categorias.innerHTML = categorias
-.filter(c => c.enPrincipal)
-.map(c =>
-    `
+console.log("typeof previo if",(filtro_categoria))
+
+if (typeof filtro_categoria !== 'string') {
+    
+    contendor_categorias.innerHTML = categorias
+        .filter(c => c.enPrincipal)
+        .map(c =>
+            `
     <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 columna-categoria-local">
     <button id="" class="btn btn-categoria w-100">${c.nombre}</button>
     </div>
     `)
+        .join("");
+} else {
+    contendor_categorias.innerHTML = categorias
+    .filter(c => c.enPrincipal)
+    .map(c =>
+        `
+<div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 columna-categoria-local ">
+<button id="" class="btn btn-categoria w-100 ${filtro_categoria === c.nombre ? 'btn-Categoria-Active' : ''}">${c.nombre}</button>
+</div>
+`)
     .join("");
-    
+}    
 const btn_categoria = document.querySelectorAll('.btn-categoria');
     
 btn_categoria.forEach(btn => {
