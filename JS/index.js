@@ -3,15 +3,13 @@ if ((!sessionStorage.getItem('vioHeroPage')) || (sessionStorage.getItem('vioHero
     window.location.href = "./Paginas/heroPage.html"
 }
 
-
-
 const categorias_array = [
     { id: 1, nombre: "Ofertas", enPrincipal: true },
     { id: 2, nombre: "Cocina", enPrincipal: true },
     { id: 3, nombre: "Comunicación", enPrincipal: true },
     { id: 4, nombre: "Entretenimiento", enPrincipal: true },
     { id: 5, nombre: "Televisores", enPrincipal: true },
-    { id: 6, nombre: "Lavado", enPrincipal: false },
+    { id: 6, nombre: "Lavado", enPrincipal: false },            
     { id: 7, nombre: "Refrigeración", enPrincipal: false },
     { id: 8, nombre: "Climatización", enPrincipal: false },
     { id: 9, nombre: "Pequeños Electrodomésticos", enPrincipal: false },
@@ -31,6 +29,16 @@ else {
     categorias = JSON.parse(localStorage.getItem('categorias'));
 }
 
+let filtro_categoria = [];
+
+if (!localStorage.getItem('filtro_categoria')) { 
+    localStorage.setItem('filtro_categoria', JSON.stringify(filtro_categoria));
+}else{
+    filtro_categoria = JSON.parse(localStorage.getItem('filtro_categoria'));
+
+
+}
+
 const productos_array = [
     {
         id: 1,
@@ -47,7 +55,7 @@ const productos_array = [
         nombre: "Heladera Whirlpool No Frost",
         detalle: "Heladera con tecnología No Frost y capacidad XXL",
         marca: "Whirlpool",
-        categorias: ["Refrigeración", "Ofertas"],
+        categorias: ["Refrigeración", "Ofertas",],
         precio: 29999.99,
         cantidad: 5,
         imagenPrincipal: "https://picsum.photos/800/400?random=5"
@@ -239,24 +247,54 @@ if (!localStorage.getItem('productos')) {
     productos = productos_array;
 }
 else {
-    productos = JSON.parse(localStorage.getItem('productos'));
+    productos_json = JSON.parse(localStorage.getItem('productos'));
+    if (localStorage.getItem('filtro_categoria').length === 0) {
+        productos = productos_json;
+    } else {
+        filtro_categoria = JSON.parse(localStorage.getItem('filtro_categoria'));
+        productos = productos_json.filter(p => 
+            p.categorias.some(categoria => 
+                filtro_categoria.includes(categoria)
+            )
+        );
+        
 }
-
-
+}
 
 const contendor_categorias = document.getElementById('contenedor-categorias-index');
 const contenedor_productos = document.getElementById('row-productos-index');
 
+const filtrarPorCategoria = (e, categoria) => { 
+    let filtradoLocal = JSON.parse(localStorage.getItem('filtro_categoria')); 
+    if (filtradoLocal.length === 0) {
+        localStorage.setItem('filtro_categoria',JSON.stringify(categoria))
+    }else {
+        localStorage.removeItem('filtro_categoria');
+        localStorage.setItem('filtro_categoria',JSON.stringify(categoria))
+    }
+
+    window.location.href = "../index.html";
+
+    console.log(btn_categoria)
+   
+}
+
 contendor_categorias.innerHTML = categorias
 .filter(c => c.enPrincipal)
 .map(c =>
-        `
-        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 columna-categoria-local">
-          <button class="btn  w-100">${c.nombre}</button>
-        </div>
+    `
+    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 columna-categoria-local">
+    <button id="" class="btn btn-categoria w-100">${c.nombre}</button>
+    </div>
     `)
     .join("");
     
+const btn_categoria = document.querySelectorAll('.btn-categoria');
+    
+btn_categoria.forEach(btn => {
+    btn.addEventListener('click', (e) => filtrarPorCategoria(e, btn.textContent));
+});
+
     
  contenedor_productos.innerHTML = productos.map(p =>
         `

@@ -107,6 +107,10 @@ color: #d88913;
   background-color: #d88913;
   color: #000000;
 }
+.btn-Categoria-Active {
+  color: #000000;
+  background-color: #d88913;
+}
 
 @media (max-width: 576px) {
   .carousel-local{
